@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatMul1", "MatMul1\MatMul1.vcxproj", "{3789A4BB-D04D-49B4-93E1-CF4ECE4188A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3789A4BB-D04D-49B4-93E1-CF4ECE4188A3}.Debug|x64.ActiveCfg = Debug|x64
+		{3789A4BB-D04D-49B4-93E1-CF4ECE4188A3}.Debug|x64.Build.0 = Debug|x64
+		{3789A4BB-D04D-49B4-93E1-CF4ECE4188A3}.Release|x64.ActiveCfg = Release|x64
+		{3789A4BB-D04D-49B4-93E1-CF4ECE4188A3}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1ED7DCC4-E9A1-486A-9379-94FC82706C27}
+	EndGlobalSection
+EndGlobal
