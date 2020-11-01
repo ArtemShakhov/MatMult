@@ -86,8 +86,8 @@ int main( int argc, char *  argv[] )
 		for (int j = 0; j < N; j++)
 		{
 			int	k = N * i + j;
-			a[k]= (rand()) % 100;
-			b[k] = (rand()) % 100;
+			a[k]= (rand()) % 10 + 1;
+			b[k] = (rand()) % 10 + 1;
 			acpu[i][j] = a[k];
 			bcpu[i][j] = b[k];
 			ccpu[i][j] = 0;
