@@ -16,20 +16,19 @@ cudaError_t addWithCuda(int *c, const int *a, const int *b, int time, int **ccpu
 
 __global__ void addKernel(const int *a, const int *b, int n, int * c)
 {
-	int   bx = blockIdx.x;     // block index
+	int   bx = blockIdx.x;     
 	int   by = blockIdx.y;
-	int   tx = threadIdx.x;        // thread index
+	int   tx = threadIdx.x;        
 	int   ty = threadIdx.y;
 	float sum = 0;           
 	int   ia = n * BLOCK_SIZE * by + n * ty;  
 	int   ib = BLOCK_SIZE * bx + tx;
 
-	// Multiply the two matrices together;
+	
 	for (int k = 0; k < n; k++)
 		sum += a[ia + k] * b[ib + k * n];
 
-	// Write the block sub-matrix to global memory;
-	// each thread writes one element
+	
 	int ic = n * BLOCK_SIZE * by + BLOCK_SIZE * bx;
 
 	c[ic + n * ty + tx] = sum;
@@ -213,8 +212,8 @@ cudaError_t addWithCuda(int *c, const int *a, const int *b, int time, int **ccpu
 	
 	if (checkResult(ccpu, c, N))
 	{
-		cout << "Âðåìÿ ðàáîòû íà CPU: " << time * 1000.0 / CLOCKS_PER_SEC << " ìèëëèñåêóíä" << endl;
-		cout << "Âðåìÿ ðàáîòû íà GPU: " << gpuTime << " ìèëëèñåêóíä";
+		cout << "Ã‚Ã°Ã¥Ã¬Ã¿ Ã°Ã Ã¡Ã®Ã²Ã» Ã­Ã  CPU: " << time * 1000.0 / CLOCKS_PER_SEC << " Ã¬Ã¨Ã«Ã«Ã¨Ã±Ã¥ÃªÃ³Ã­Ã¤" << endl;
+		cout << "Ã‚Ã°Ã¥Ã¬Ã¿ Ã°Ã Ã¡Ã®Ã²Ã» Ã­Ã  GPU: " << gpuTime << " Ã¬Ã¨Ã«Ã«Ã¨Ã±Ã¥ÃªÃ³Ã­Ã¤";
 	}
 
 Error:
